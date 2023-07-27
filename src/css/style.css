@@ -1,5 +1,25 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Museo Sans Light";
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-300.eot");
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSans/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSans/MuseoSansCyrl-300.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Museo Sans Bold";
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-700.eot");
+  src: url("../fonts/MuseoSans/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSans/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSans/MuseoSansCyrl-700.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: "Museo Sans Light", sans-serif;
+  font-weight: 300;
 }
 
 img {
@@ -21,6 +41,47 @@ img {
   background-color: #ffd200;
   color: #333333;
   border: none;
+  font-family: "Museo Sans Bold", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 18px 47px;
+  border-radius: 10px;
+}
+.button:hover {
+  background-color: #ffdb33;
+}
+
+.input {
+  border: 1px solid #dddddd;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 20px 25px;
+}
+
+.section-title {
+  font-size: 30px;
+  font-family: "Museo Sans Bold", sans-serif;
+  font-weight: 700;
+  text-align: center;
+  line-height: 45px;
+}
+@media (max-width: 640px) {
+  .section-title {
+    font-size: 25px;
+  }
+}
+@media (max-width: 321px) {
+  .section-title {
+    font-size: 18px;
+    line-height: normal;
+  }
+}
+
+.section-subtitle {
+  color: #000;
+  font-size: 20px;
+  text-align: center;
+  display: block;
 }
 
 .header {
@@ -57,12 +118,19 @@ img {
   text-decoration: none;
   display: block;
   margin-top: 5px;
+  font-family: "Museo Sans Bold", sans-serif;
+  font-weight: 700;
 }
 .header__button {
   padding: 18px 47px;
   border-radius: 10px;
   margin-left: 30px;
   font-size: 13px;
+}
+@media (max-width: 321px) {
+  .header__button {
+    font-size: 10px;
+  }
 }
 
 .main {
@@ -90,6 +158,8 @@ img {
   color: #333333;
   padding-right: 200px;
   line-height: 55px;
+  font-family: "Museo Sans Bold", sans-serif;
+  font-weight: 700;
   margin: 45px 0 20px 0;
 }
 @media (max-width: 1200px) {
@@ -103,6 +173,14 @@ img {
     line-height: 1.4;
   }
 }
+@media (max-width: 321px) {
+  .main-text__title {
+    font-size: 24px;
+    line-height: normal;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+}
 .main-text__subtitle {
   font-size: 20px;
   line-height: 65px;
@@ -112,6 +190,12 @@ img {
   .main-text__subtitle {
     font-size: 16px;
     line-height: 1.4;
+  }
+}
+@media (max-width: 321px) {
+  .main-text__subtitle {
+    max-width: 167px;
+    display: inline-block;
   }
 }
 .main-image {
@@ -136,6 +220,9 @@ img {
   align-items: center;
   margin-bottom: 20px;
 }
+.main-list__item:last-child {
+  margin-bottom: 0;
+}
 @media (max-width: 640px) {
   .main-list__item {
     margin-bottom: 15px;
@@ -151,6 +238,11 @@ img {
   align-items: center;
   margin-right: 30px;
 }
+@media (max-width: 321px) {
+  .main-list__image {
+    margin-right: 0;
+  }
+}
 .main-list__text {
   line-height: 24px;
   font-size: 14px;
@@ -162,4 +254,459 @@ img {
     font-size: 12px;
     max-width: 250px;
   }
+}
+@media (max-width: 321px) {
+  .main-list__text {
+    padding-left: 15px;
+    max-width: 215px;
+    line-height: normal;
+  }
+}
+
+.offer {
+  padding: 90px 0;
+  background: url(../img/offer-img.jpg) no-repeat;
+  background-position: center right;
+  background-size: contain;
+  position: relative;
+}
+@media (max-width: 1200px) {
+  .offer {
+    background-size: cover;
+  }
+}
+@media (max-width: 768px) {
+  .offer {
+    background: #fff;
+  }
+}
+@media (max-width: 321px) {
+  .offer {
+    padding: 50px 0 57px 0;
+  }
+}
+.offer:before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+}
+.offer-block {
+  width: 50%;
+  padding-right: 90px;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .offer-block {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+.offer-title {
+  font-size: 24px;
+  line-height: 35px;
+  max-width: 350px;
+  margin-bottom: 25px;
+  font-family: "Museo Sans Bold", sans-serif;
+  font-weight: 700;
+}
+@media (max-width: 321px) {
+  .offer-title {
+    font-size: 18px;
+    max-width: 256px;
+    line-height: normal;
+  }
+}
+.offer-subtitle {
+  display: inline-block;
+  max-width: 260px;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+.offer__input {
+  margin-bottom: 30px;
+  width: 240px;
+}
+@media (max-width: 1200px) {
+  .offer__input {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+}
+.offer__input:first-child {
+  margin-right: 10px;
+}
+.offer__button {
+  width: 100%;
+  min-height: 70px;
+}
+@media (max-width: 1200px) {
+  .offer__button {
+    font-size: 13px;
+  }
+}
+@media (max-width: 768px) {
+  .offer__button {
+    font-size: 16px;
+  }
+}
+@media (max-width: 321px) {
+  .offer__button {
+    font-size: 14px;
+    padding: 20px 80px;
+  }
+}
+.offer-comment {
+  display: flex;
+  justify-content: space-between;
+  color: #333333;
+}
+@media (max-width: 321px) {
+  .offer-comment {
+    display: block;
+  }
+}
+.offer-comment__span {
+  width: 50%;
+  display: inline-block;
+  margin-top: 30px;
+  line-height: 24px;
+  max-width: 189px;
+  text-align: left;
+  font-size: 15px;
+}
+@media (max-width: 321px) {
+  .offer-comment__span {
+    width: 60%;
+  }
+  .offer-comment__span:last-child {
+    margin-top: 15px;
+  }
+}
+.offer-comment__tel {
+  font-family: "Museo Sans Bold", sans-serif;
+  font-weight: 700;
+  font-weight: 400;
+  text-decoration: none;
+  color: #333333;
+  font-size: 15px;
+}
+
+.portfolio {
+  padding: 100px 0;
+  background: #f5f5f5 url("../img/portfolio-bg.png") left repeat-y;
+  background-size: 50%;
+}
+@media (max-width: 321px) {
+  .portfolio {
+    padding: 40px 0;
+    background: #f5f5f5;
+  }
+}
+.portfolio__title {
+  margin-bottom: 100px;
+  color: #333333;
+}
+@media (max-width: 321px) {
+  .portfolio__title {
+    margin-bottom: 40px;
+  }
+}
+.portfolio__arrows {
+  max-width: 120px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 70px;
+}
+
+.arrows__left, .arrows__right {
+  cursor: pointer;
+}
+
+.slider__image {
+  margin: auto;
+}
+
+.price {
+  padding: 100px 0;
+}
+@media (max-width: 321px) {
+  .price {
+    padding: 50px 0;
+  }
+}
+.price__title {
+  margin-bottom: 60px;
+  max-width: 466px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 321px) {
+  .price__title {
+    max-width: 180px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 26px;
+  }
+}
+.price__subtitle {
+  margin-bottom: 60px;
+}
+@media (max-width: 321px) {
+  .price__subtitle {
+    font-size: 14px;
+  }
+}
+.price__card {
+  margin-bottom: 30px;
+}
+
+/* Aby se nám obrázky karet seřadily vedle sebe, nastavíme display: flex; aby se zalamovaly pod sebe, nastavíme flex-wrap: wrap; aby měly mezi sebou mezery, nastavíme just.content: space-between*/
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media (max-width: 775px) {
+  .cards {
+    justify-content: center;
+  }
+}
+
+/* Abychom měli text u kartiček vždy na prostředku, musíme pro .card udělat text-align: center */
+.card {
+  text-align: center;
+  border: 1px solid #e8e8e8;
+  transition: 0.2s;
+}
+.card:hover {
+  box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+}
+.card:hover .card__image::before {
+  opacity: 1;
+}
+.card__text {
+  padding: 40px;
+}
+@media (max-width: 321px) {
+  .card__text {
+    padding: 30px;
+  }
+}
+.card__image {
+  position: relative;
+}
+.card__image img {
+  display: block;
+}
+.card__image::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #ffd200 0%, rgba(255, 255, 255, 0) 100%);
+  opacity: 0;
+  transition: 0.2s;
+}
+.card__title {
+  margin-top: 0;
+  font-size: 18px;
+  color: #000;
+  margin-bottom: 30px;
+}
+@media (max-width: 321px) {
+  .card__title {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+}
+.card__link {
+  display: inline-block;
+  font-family: "Museo Sans Bold", sans-serif;
+  font-weight: 700;
+  text-decoration: none;
+  color: #333333;
+  position: relative;
+}
+.card__link:hover::after {
+  height: 13px;
+}
+.card__link::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  button: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #ffd200;
+  transition: 0.2s;
+}
+
+/* transition: .2s slouží pro pomalejší animaci zobrazení tlusté čáry pod textem v kartičce */
+/* 5. Sekce s kroky .steps */
+.steps {
+  padding-bottom: 120px;
+}
+@media (max-width: 1200px) {
+  .steps {
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 700px) {
+  .steps {
+    padding-bottom: 29px;
+  }
+}
+.steps__title {
+  margin-bottom: 60px;
+}
+@media (max-width: 321px) {
+  .steps__title {
+    margin-bottom: 30px;
+  }
+}
+.steps__subtitle {
+  margin-bottom: 75px;
+}
+@media (max-width: 321px) {
+  .steps__subtitle {
+    margin-bottom: 40px;
+  }
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1200px) {
+  .icons {
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 700px) {
+  .icons {
+    flex-direction: column;
+  }
+}
+
+.icon {
+  text-align: center;
+  position: relative;
+}
+.icon:last-child::after {
+  display: none;
+}
+.icon::after {
+  content: " ";
+  position: absolute;
+  top: -10px;
+  right: -95px;
+  display: block;
+  width: 72px;
+  height: 25px;
+  background-image: url("../img/iconArrowRight.png");
+}
+@media (max-width: 1200px) {
+  .icon::after {
+    display: none;
+  }
+}
+.icon__image {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border: 3px solid #ffd200;
+  background-color: #ffffff;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.icon__image img {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+}
+.icon__text {
+  max-width: 140px;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 20px;
+}
+@media (max-width: 730px) {
+  .icon__text {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 321px) {
+  .icon__text {
+    max-width: 161px;
+  }
+}
+
+.notice {
+  background-color: #ffc000;
+  padding: 100px 0;
+}
+@media (max-width: 321px) {
+  .notice {
+    padding-top: 73px;
+    padding-bottom: 97px;
+  }
+}
+.notice__text {
+  text-align: center;
+  font-size: 32px;
+  max-width: 750px;
+  margin: auto;
+  line-height: 50px;
+  font-weight: 300;
+}
+@media (max-width: 1200px) {
+  .notice__text {
+    font-size: 28px;
+    max-width: 560px;
+  }
+}
+@media (max-width: 601px) {
+  .notice__text {
+    font-size: 18px;
+    max-width: 417px;
+  }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.modal_active {
+  display: flex;
+}
+.modal-dialog {
+  margin: auto;
+  max-width: 450px;
+  width: 90%;
+  min-height: 200px;
+  background-color: #fff;
+  padding: 40px;
+  position: relative;
+}
+.modal-dialog__close {
+  position: absolute;
+  right: 0;
+  top: 0;
 }/*# sourceMappingURL=style.css.map */

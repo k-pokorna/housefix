@@ -5,13 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Napojení souboru normalize.css -->
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/animate.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>HouseFix</title>
 </head>
 
 <body>
 
+    <!-- Header (záhlaví webu) -->
     <header class="header">
         <div class="container">
             <div class="header-block">
@@ -23,18 +27,20 @@
                         <span class="header__address">Praha</span>
                         <a href="tel:+420777167699" class="header__phone">+420 777 167 699</a>
                     </div>
-                    <button class="button header__button">Zavolejte mi</button>
+                    <button class="button header__button wow animate__animated animate__pulse" data-wow-delay=".7s" id="button">Zavolejte mi</button>
                 </div>
             </div>
         </div>
     </header>
 
+    <!-- Sekce počínající hlavní sekcí -->
     <main>
+        <!-- 1. Sekce - Hlavní sekce (.main) -->
         <section class="main">
             <div class="container">
-                <div class="main-block">
+                <div class="main-block wow animate__animated animate__slideInLeft" data-wow-delay=".1s">
                     <div class="main-text">
-                        <h1 class="main-text__title">Dekorace vnitřních prostorů "na klíč"</h1>
+                        <h1 class="main-text__title">Dekorace vnitřních prostorů "na&nbsp;klíč"</h1>
                         <span class="main-text__subtitle">se zárukou kvality stanovené ve smlouvě</span>
                         <ul class="main-list">
                             <li class="main-list__item">
@@ -47,8 +53,7 @@
                                 <div class="main-list__image">
                                     <img src="img/calculator.png" alt="Kalkulátor">
                                 </div>
-                                <span class="main-list__text">Vypočítáme náklady práce
-                                    a materiálů ve stejný den poptávky</span>
+                                <span class="main-list__text">Vypočítáme náklady práce a&nbsp;materiálů ve stejný den poptávky</span>
                             </li>
                             <li class="main-list__item">
                                 <div class="main-list__image">
@@ -65,7 +70,239 @@
                 </div>
             </div>
         </section>
+
+        <!-- 2. Sekce .offer (nabídka) -->
+        <section class="offer">
+            <div class="container">
+                <div class="offer-block wow animate__animated animate__slideInRight" data-wow-delay=".1s">
+                    <h2 class="offer-title">
+                        Bezplatně vypracujeme design-projekt pro Váš domov a realizujeme ho!
+                    </h2>
+                    <span class="offer-subtitle">
+                        Zanechte poptávku pro vypracování bezplatného design-projektu!
+                    </span>
+                    <form action="#" class="form offer__form">
+                        <input type="text" class="input offer__input" placeholder="Vaše jméno">
+                        <input type="tel" class="input offer__input" placeholder="Váš telefon">
+                        <button class="button offer__button">
+                            Získejte bezplatný design-projekt
+                        </button>
+                    </form>
+                    <!-- Spodní část sekce .offer za domácí úkol -->
+                    <div class="offer-comment">
+                        <span class="offer-comment__span">
+                            Náš manažer vám zavolá v&nbsp;průběhu 60 sekund
+                        </span>
+                        <span class="offer-comment__span">
+                            nebo nám zavolejte sami <a href="tel:+420777167699" class="offer-comment__tel">+420 777 167 699</a>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Sekce .portfolio (Portfolio) -->
+        <section class="portfolio">
+            <div class="container">
+                <h2 class="section-title portfolio__title">
+                    Za dobu práce od roku 2007,<br>jsme realizovali více než 500 oprav bytů a&nbsp;domů
+                </h2>
+                <div class="slider wow animate__animated animate__slideInUp" data-wow-delay=".1s">
+                    <div class="slider__item"><img class="slider__image" src="img/portfolio1.jpg" alt="Obrázek 1"></div>
+                    <div class="slider__item"><img class="slider__image" src="img/portfolio2.jpg" alt="Obrázek 2"></div>
+                    <div class="slider__item"><img class="slider__image" src="img/portfolio3.jpg" alt="Obrázek 3"></div>
+                    <div class="slider__item"><img class="slider__image" src="img/portfolio1.jpg" alt="Obrázek 1"></div>
+                    <div class="slider__item"><img class="slider__image" src="img/portfolio2.jpg" alt="Obrázek 2"></div>
+                    <div class="slider__item"><img class="slider__image" src="img/portfolio3.jpg" alt="Obrázek 3"></div>
+                </div>
+
+                <div class="arrows portfolio__arrows">
+                    <div class="arrows__left">
+                        <img src="img/arrow-left.png" alt="šipka doleva">
+                    </div>
+                    <div class="arrows__right">
+                        <img src="img/arrow-right.png" alt="šipka doprava">    
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Sekce .price (Ceny) -->
+        <section class="price">
+            <div class="container">
+                <h2 class="section-title price__title">
+                    Máme velmi flexibilní systém slev pro komplexní práce!
+                </h2>
+                <span class="section-subtitle price__subtitle">
+                    Ceny za naše služby
+                </span>
+                <!-- Element cards (karty jednotlivé ceny) -->
+                <div class="cards">
+                    <!-- KARTA 1 -->
+                    <div class="card price__card wow animate__animated animate__fadeInUp" data-wow-delay=".1s">
+                        <div class="card__image">
+                            <img src="img/price1.jpg" alt="Koupelna">
+                        </div>
+                        <div class="card__text">
+                            <h4 class="card__title">
+                                Rekonstrukce koupelen a toalet
+                            </h4>
+                            <a href="#" class="card__link">
+                                Zjistit ceny
+                            </a>
+                        </div>
+                    </div>
+                    <!-- KARTA 2 -->
+                    <div class="card price__card wow animate__animated animate__fadeInUp" data-wow-delay=".2s">
+                        <div class="card__image">
+                            <img src="img/price2.jpg" alt="Rekonstrukce v nových budovách">
+                        </div>
+                        <div class="card__text">
+                            <h4 class="card__title">
+                                Rekonstrukce v nových budovách
+                            </h4>
+                            <a href="#" class="card__link">
+                                Zjistit ceny
+                            </a>
+                        </div>
+                    </div>
+                    <!-- KARTA 3 -->
+                    <div class="card price__card wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+                        <div class="card__image">
+                            <img src="img/price3.jpg" alt="Kancelářské prostory">
+                        </div>
+                        <div class="card__text">
+                            <h4 class="card__title">
+                                Výzdoba kancelářských prostorů
+                            </h4>
+                            <a href="#" class="card__link">
+                                Zjistit ceny
+                            </a>
+                        </div>
+                    </div>
+                    <!-- KARTA 4 -->
+                    <div class="card price__card wow animate__animated animate__fadeInUp" data-wow-delay=".4s">
+                        <div class="card__image">
+                            <img src="img/price4.jpg" alt="Pokoje a apartmány">
+                        </div>
+                        <div class="card__text">
+                            <h4 class="card__title">
+                                Rekonstrukce pokojů a apartmánů
+                            </h4>
+                            <a href="#" class="card__link">
+                                Zjistit ceny
+                            </a>
+                        </div>
+                    </div>
+                    <!-- KARTA 5 -->
+                    <div class="card price__card wow animate__animated animate__fadeInUp" data-wow-delay=".5s">
+                        <div class="card__image">
+                            <img src="img/price5.jpg" alt="Kuchyně">
+                        </div>
+                        <div class="card__text">
+                            <h4 class="card__title">
+                                Renovace kuchyní
+                            </h4>
+                            <a href="#" class="card__link">
+                                Zjistit ceny
+                            </a>
+                        </div>
+                    </div>
+                    <!-- KARTA 6 -->
+                    <div class="card price__card wow animate__animated animate__fadeInUp" data-wow-delay=".6s">
+                        <div class="card__image">
+                            <img src="img/price6.jpg" alt="Chaty a chalupy"></div>
+                        <div class="card__text">
+                            <h4 class="card__title">
+                                Opravy chat a chalup
+                            </h4>
+                            <a href="#" class="card__link">
+                                Zjistit ceny
+                            </a>
+                        </div>
+                    </div>
+                </div >
+            </div>
+        </section>
+
+        <!-- 5. Sekce .steps (Kroky) -->
+        <section class="steps">
+            <div class="container">
+                <h2 class="section-title steps__title">
+                    Naši experti jsou připraveni k&nbsp;změření<br> kdykoli se Vám to hodí
+                </h2>
+                <span class="section-subtitle steps__subtitle">5 kroků k renovaci</span>
+                <div class="icons">
+                    <!-- Ikony -->
+                    <div class="icon">
+                        <div class="icon__image">
+                            <img src="img/icon1.png" alt="Ikona 1">
+                        </div>
+                        <span class="icon__text">
+                            Voláte nám nebo zanecháváte požadavek
+                        </span>
+                    </div>
+
+                    <div class="icon">
+                        <div class="icon__image">
+                            <img src="img/icon2.png" alt="Ikona 2">
+                        </div>
+                        <span class="icon__text">
+                            Dohodneme se na čase pro změření vašeho objektu
+                        </span>
+                    </div>
+                    <div class="icon">
+                        <div class="icon__image">
+                            <img src="img/icon3.png" alt="Ikona 3">
+                        </div>
+                        <span class="icon__text">
+                            Vypočítáme rozpočet a&nbsp;schválíme ho s vámi
+                        </span>
+                    </div>
+                    <div class="icon">
+                        <div class="icon__image">
+                            <img src="img/icon4.png" alt="Ikona 4">
+                        </div>
+                        <span class="icon__text">
+                            Podepíšeme smlouvu a&nbsp;nakoupíme materiál za&nbsp;výhodnou cenu
+                        </span>
+                    </div>
+                    <div class="icon">
+                        <div class="icon__image">
+                            <img src="img/icon5.png" alt="Ikona 5">
+                        </div>
+                        <span class="icon__text">
+                            Provádíme opravy v&nbsp;uvedeném termínu
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="notice">
+            <div class="container">
+                <h2 class="notice__text">
+                    Oprava Vás bude stát méně, protože používáme kvalitní materiály za&nbsp;velkoobchodní ceny
+                </h2>
+            </div>
+        </div>
+
+
     </main>
+
+    <!-- Modální okno pro tlačítko v header - lekce PRAXE - JavaScript -->
+    <div class="modal" id="modal">
+        <div class="modal-dialog">
+            <button class="modal-dialog__close" id="close">&times;</button>
+            <h4 class="modal-dialog__title">Modální okno</h4>
+        </div>
+    </div>
+
+    <!-- Napojení jQuery (napojujeme nejprve jQuery a potom externí soubor s JavaScriptem main.js) -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
 
 </body>
 
