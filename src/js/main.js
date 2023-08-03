@@ -29,7 +29,34 @@ $(document).ready(function(){
         modal.removeClass('modal_active');
     });
 
-    //Vložení slideru z https://kenwheeler.github.io/slick/
+    // Validace formulářů z https://github.com/jquery-validation/jquery-validation/releases/tag/1.19.5
+    $('#brief-form').validate({
+      rules: {
+        username: 'required',
+        email: {  // pro validaci e-mailu, ale v grafické předloze pole pro e-mail není
+          required: true,
+          email: true
+        },
+        phone: {
+          required: true,
+          number: true,
+          rangelength: [9, 9]
+        }
+      },
+      messages: {
+        username: 'Uveďte Vaše jméno a příjmení',
+        email: 'Uveďte Vaši e-mailovou adresu', // pro validaci e-mailu, ale v grafické předloze pole pro e-mail není
+        phone: 'Uveďte celé Vaše telefonní číslo bez mezer a předvolby'
+      }
+    });
+
+
+   
+
+
+
+
+    // Vložení slideru z https://kenwheeler.github.io/slick/
     $('.slider').slick({
         slidesToShow: 3,
         prevArrow: $('.arrows__left'),

@@ -957,6 +957,14 @@ img {
   font-size: 15px;
 }
 
+.valid {
+  background-color: #dcffd6;
+}
+
+.error {
+  background-color: #ffd6d6;
+}
+
 .modal {
   position: fixed;
   left: 0;
