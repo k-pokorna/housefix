@@ -451,6 +451,7 @@ img
             font-size: 18px
             max-width: 417px
 
+// 6. Sekce .info (Benefity)
 .info
     padding: 100px 0
     @media (max-width: 1171px)
@@ -511,6 +512,7 @@ img
         @media (max-width: 1171px)
             margin-bottom: 44px
 
+// 7. Sekce .brief (Formulář - otázky pro klienta)
 .brief
     background-image: url('../img/brief-color-bg.jpg'), url('../img/brief-bg.jpg')
     background-position: left center, center right
@@ -523,7 +525,6 @@ img
         background-size: 100% 50%, cover
         background-repeat: repeat-x, no-repeat
         padding: 46px 0
-
     &-block
         display: flex
         @media (max-width: 768px)
@@ -583,7 +584,6 @@ img
             +bold
             &:last-child
                 margin-bottom: 0
-    
         &__counter
             width: 35px
             height: 35px
@@ -614,7 +614,7 @@ img
             margin-bottom: 40px
             margin-top: 150px
         @media (max-width: 768px)
-            margin-top: 110px // původně 68px
+            margin-top: 110px
             margin-bottom: 27px
     &__subtitle
         font-size: 16px
@@ -628,13 +628,93 @@ img
     &__description
         font-size: 15px
 
-
+// třídy .valid a .error z knihovny na: https://github.com/jquery-validation/jquery-validation/releases/tag/1.19.5
 .valid
     background-color: $valid-bg-color
 
 .error
     background-color: $error-bg-color
 
+// 8. Footer s mapou a kontakty
+.footer
+    position: relative
+    @media (max-width: 768px)
+        display: flex
+        flex-direction: column
+
+.map
+    width: 50%
+    position: absolute
+    left: 0
+    top: 0
+    @media (max-width: 768px)
+        position: static
+        width: 100%
+        order: 1
+
+.contacts
+    flex-basis: 50%
+    padding-top: 100px
+    padding-left: 200px
+    @media (max-width: 1200px)
+        padding-left: 30px
+    @media (max-width: 768px)
+        flex-basis: 100%
+        padding-top: 67px
+        padding-left: 0
+    &-block
+        display: flex
+        justify-content: flex-end
+        @media (max-width: 768px)
+            flex-basis: 100%
+            order: -1
+    &__title
+        +bold
+        font-size: 24px
+        line-height: 33px
+        margin-bottom: 100px
+        @media (max-width: 1200px)
+            text-align: center
+        @media (max-width: 768px)
+            margin-bottom: 34px
+            margin-top: 0
+            font-size: 18px
+        @media (max-width: 415px)
+            text-align: left
+    &-list
+        padding: 0
+        list-style-type: none
+        @media (max-width: 1200px)
+            display: flex
+            flex-direction: column
+        @media (max-width: 768px)
+            margin-bottom: 25px
+        &__icon
+            width: 20px
+            height: 20px
+            text-align: center
+            line-height: 20px
+            margin-right: 20px
+        &__item
+            display: flex
+            align-items: flex-start
+            margin-bottom: 40px
+            @media (max-width: 1200px)
+                justify-content: center
+            strong
+                +bold
+        &__text
+            line-height: 1.4
+            @media (max-width: 1200px)
+                width: 100%
+                max-width: 300px
+            a
+                color: $text-color
+                text-decoration: none
+                &:hover
+                    text-decoration: underline
+
+// Modální okno
 .modal
     position: fixed
     left: 0
@@ -657,6 +737,3 @@ img
             position: absolute
             right: 0
             top: 0
-
-
-    

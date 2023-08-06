@@ -965,6 +965,134 @@ img {
   background-color: #ffd6d6;
 }
 
+.footer {
+  position: relative;
+}
+@media (max-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.map {
+  width: 50%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+@media (max-width: 768px) {
+  .map {
+    position: static;
+    width: 100%;
+    order: 1;
+  }
+}
+
+.contacts {
+  flex-basis: 50%;
+  padding-top: 100px;
+  padding-left: 200px;
+}
+@media (max-width: 1200px) {
+  .contacts {
+    padding-left: 30px;
+  }
+}
+@media (max-width: 768px) {
+  .contacts {
+    flex-basis: 100%;
+    padding-top: 67px;
+    padding-left: 0;
+  }
+}
+.contacts-block {
+  display: flex;
+  justify-content: flex-end;
+}
+@media (max-width: 768px) {
+  .contacts-block {
+    flex-basis: 100%;
+    order: -1;
+  }
+}
+.contacts__title {
+  font-family: "Museo Sans Bold", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  margin-bottom: 100px;
+}
+@media (max-width: 1200px) {
+  .contacts__title {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .contacts__title {
+    margin-bottom: 34px;
+    margin-top: 0;
+    font-size: 18px;
+  }
+}
+@media (max-width: 415px) {
+  .contacts__title {
+    text-align: left;
+  }
+}
+.contacts-list {
+  padding: 0;
+  list-style-type: none;
+}
+@media (max-width: 1200px) {
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+  .contacts-list {
+    margin-bottom: 25px;
+  }
+}
+.contacts-list__icon {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  margin-right: 20px;
+}
+.contacts-list__item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+@media (max-width: 1200px) {
+  .contacts-list__item {
+    justify-content: center;
+  }
+}
+.contacts-list__item strong {
+  font-family: "Museo Sans Bold", sans-serif;
+  font-weight: 700;
+}
+.contacts-list__text {
+  line-height: 1.4;
+}
+@media (max-width: 1200px) {
+  .contacts-list__text {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+.contacts-list__text a {
+  color: #000000;
+  text-decoration: none;
+}
+.contacts-list__text a:hover {
+  text-decoration: underline;
+}
+
 .modal {
   position: fixed;
   left: 0;
